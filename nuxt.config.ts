@@ -1,7 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/google-fonts", "@nuxt/image"],
+  css: ['~/assets/scss/main.scss'],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
   googleFonts: {
     display: 'swap',
     families: {
@@ -11,5 +18,11 @@ export default defineNuxtConfig({
         ital: [100, 200, 300, 400, 700]
       },
     }
-  }
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 })
