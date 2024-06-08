@@ -2,7 +2,12 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        kanit: ['"Kanit"', "sans-serif"],
+        tiny: ['"Tiny5"', "sans-serif"]
+      }
+    },
   },
   plugins: [],
 }
