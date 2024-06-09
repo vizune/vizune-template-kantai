@@ -13,4 +13,32 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: "Tiny5", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  margin-bottom: 1.75rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: line-through;
+  }
 }

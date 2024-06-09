@@ -10,18 +10,26 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'apricot-girl': "url('/bg_apricot.jpg')",
+        'breeze-girl': "url('/bg_breeze.jpg')",
+        'lilac-girl': "url('/bg_lilac.jpg')",
+        'lime-girl': "url('/bg_lime.jpg')",
+        'plum-girl': "url('/bg_plum.jpg')",
+        'sunflower-girl': "url('/bg_sunflower.jpg')"
+      },
+      colors: {
+        'apricot': '#febb99',
+        'breeze': '#b3daec',
+        'lilac': '#afaab8',
+        'lime': '#baf7c3',
+        'plum': '#ddbbc3',
+        'sunflower': '#faffaf'
+      },
       fontFamily: {
         kanit: ['"Kanit"', "sans-serif"],
         tiny: ['"Tiny5"', "sans-serif"]
       },
-      backgroundImage: {
-        'apricot': "url('/bg_apricot.jpg')",
-        'breeze': "url('/bg_breeze.jpg')",
-        'lilac': "url('/bg_lilac.jpg')",
-        'lime': "url('/bg_lime.jpg')",
-        'plum': "url('/bg_plum.jpg')",
-        'sunflower': "url('/bg_sunflower.jpg')"
-      }
     },
   },
   plugins: [],
