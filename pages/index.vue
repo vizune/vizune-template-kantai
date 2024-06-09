@@ -15,13 +15,13 @@
 
     <AppSection id="about" class="bg-breeze bg-breeze-girl" position="right">
       <h2>About</h2>
-      <p>The theme's colors and background image assets are fully configurable through the <pre class="inline">tailwind.config.js</pre> file. This allows you to easily customize the look and feel of your site to match your personal style or branding requirements.</p>
+      <p>The theme's colors and background image assets are fully configurable through the <em>tailwind.config.js</em> file. This allows you to easily customize the look and feel of your site to match your personal style or branding requirements.</p>
       <p>Each element of the theme is broken down into bite-sized components, making it more manageable and easier to customize. This modular approach ensures that you can efficiently adjust and extend the template to suit your needs.</p>
       <Button 
         url="/" 
         label="Find out more" 
         backgroundColor="bg-plum"
-        borderColor="border-lilac"
+        borderColor="border-sunflower"
       />
     </AppSection>
 
