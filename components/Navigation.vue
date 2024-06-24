@@ -29,8 +29,8 @@ const links = [
 </script>
 <template>
   <ul class="grid grid-flow-row sm:grid-flow-col auto-cols-fr gap-1">
-    <li v-for="link in links" :class="`bg-${link.color} text-center p-3`">
-      <NuxtLink :to="link.url" class="text-xl tracking-wider">{{ link.name }}</NuxtLink>
+    <li v-for="link in links" :class="`bg-${link.color} text-center flex`">
+      <NuxtLink :to="link.url" class="w-full p-3 text-xl tracking-wider">{{ link.name }}</NuxtLink>
     </li>
   </ul>
 </template>
