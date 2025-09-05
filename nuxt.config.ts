@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/google-fonts"],
   css: ['~/assets/scss/main.scss'],
+  experimental: {
+    inlineSSRStyles: true
+  },
   components: [
     {
       path: '~/components',
@@ -19,7 +22,8 @@ export default defineNuxtConfig({
       },
     },
     download: true,
-    inject: true
+    inject: true,
+    preconnect: true
   },
   postcss: {
     plugins: {

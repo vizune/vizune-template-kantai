@@ -4,23 +4,35 @@ import { useRouter } from 'vue-router'
 
 const headerRef = ref<HTMLElement | null>(null)
 const router = useRouter()
-const updateHeaderHeight = () => {
-  const h = headerRef.value?.offsetHeight ?? 0
-  document.documentElement.style.setProperty('--header-h', `${h}px`)
-}
+let ro: ResizeObserver | null = null
+
+const setHeaderVar = (h: number) =>
+  document.documentElement.style.setProperty('--header-h', `${Math.round(h)}px`)
+
 const goTop = async () => {
   if (window.location.pathname !== '/') await router.push({ path: '/' })
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
+
 onMounted(() => {
-  updateHeaderHeight()
-  window.addEventListener('resize', updateHeaderHeight)
+  const el = headerRef.value
+  if (!el) return
+
+  ro = new ResizeObserver((entries) => {
+    const entry = entries[0]
+    // Prefer borderBoxSize if available; fall back to contentRect
+    const h =
+      (entry.borderBoxSize && entry.borderBoxSize[0]?.blockSize) ||
+      entry.contentRect.height
+    setHeaderVar(h)
+  })
+  ro.observe(el)
 })
-onBeforeUnmount(() => window.removeEventListener('resize', updateHeaderHeight))
+
+onBeforeUnmount(() => ro?.disconnect())
 </script>
 
 <template>
-  <!-- static on mobile; fixed from lg up -->
   <header
     ref="headerRef"
     class="inset-x-0 top-0 bg-black/80 backdrop-blur supports-[backdrop-filter]:bg-black/60 lg:fixed lg:z-50"
