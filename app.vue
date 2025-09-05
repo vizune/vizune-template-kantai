@@ -10,7 +10,7 @@ useHead({
     <AppHeader />
 
     <!-- Push content below the fixed header using the measured CSS var -->
-    <main class="pt-[var(--header-h)]">
+    <main class="lg:pt-[var(--header-h)]">
       <nuxt-page />
       <AppFooter />
     </main>
