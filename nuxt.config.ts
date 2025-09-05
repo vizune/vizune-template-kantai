@@ -17,7 +17,9 @@ export default defineNuxtConfig({
         wght: [100, 200, 300, 400, 700],
         ital: [100, 200, 300, 400, 700]
       },
-    }
+    },
+    download: true,
+    inject: true
   },
   postcss: {
     plugins: {
