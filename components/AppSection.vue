@@ -19,7 +19,6 @@ defineProps({
 
 <style lang="scss">
 .Wrapper {
-  /* Apply the minimum height to the root section */
   min-height: calc(100vh - var(--header-h));
 
   &-left {

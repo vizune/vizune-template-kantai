@@ -7,6 +7,7 @@ useHead({
 </script>
 
 <template>
+  <SvgSprite />
   <div>
     <AppHeader />
 

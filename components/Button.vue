@@ -3,11 +3,12 @@
     label: String,
     url: String,
     backgroundColor: String,
-    borderColor: String
+    borderColor: String,
+    external: Boolean
   })
 </script>
 <template>
-  <a :href="url" class="button">
+  <a v-if="external" :href="url" class="button" target="_blank">
     <div :class="`bottom ${backgroundColor}`"></div>
     <div :class="`top border-2 ${borderColor}`">
       <div class="label font-tiny lg:text-lg text-black">{{label}}</div>
@@ -17,6 +18,16 @@
       <div class="button-border button-border-bottom"></div>
     </div>
   </a>
+  <NuxtLink v-else :to="url" class="button">
+    <div :class="`bottom ${backgroundColor}`"></div>
+    <div :class="`top border-2 ${borderColor}`">
+      <div class="label font-tiny lg:text-lg text-black">{{label}}</div>
+      <div class="button-border button-border-left"></div>
+      <div class="button-border button-border-top"></div>
+      <div class="button-border button-border-right"></div>
+      <div class="button-border button-border-bottom"></div>
+    </div>
+  </NuxtLink>
 </template>
 <style lang="scss" scoped>
 .button {

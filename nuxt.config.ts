@@ -1,17 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/google-fonts"],
+  modules: ['@nuxtjs/google-fonts'],
   css: ['~/assets/scss/main.scss'],
-  experimental: {
-    inlineSSRStyles: true
-  },
   components: [
     {
       path: '~/components',
       pathPrefix: false,
     },
   ],
+  experimental: {
+    inlineSSRStyles: true
+  },
+  vite: {
+    build: { cssCodeSplit: false },
+  },
   googleFonts: {
     display: 'swap',
     families: {
