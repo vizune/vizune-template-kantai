@@ -1,0 +1,10 @@
+[build]
+  command = "npm ci --include=optional && npm run generate"
+
+[build.environment]
+  NODE_VERSION = "20.19.5"
+
+[[headers]]
+  for = "/_nuxt/*"
+  [headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
