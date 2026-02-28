@@ -10,7 +10,7 @@
 <template>
   <a v-if="external" :href="url" class="button" target="_blank">
     <div :class="`bottom ${backgroundColor}`"></div>
-    <div :class="`top border-2 ${borderColor}`">
+    <div :class="`top border-2 border-black ${borderColor}`">
       <div class="label font-tiny lg:text-lg text-black">{{label}}</div>
       <div class="button-border button-border-left"></div>
       <div class="button-border button-border-top"></div>
@@ -20,7 +20,7 @@
   </a>
   <NuxtLink v-else :to="url" class="button">
     <div :class="`bottom ${backgroundColor}`"></div>
-    <div :class="`top border-2 ${borderColor}`">
+    <div :class="`top border-2 border-black ${borderColor}`">
       <div class="label font-tiny lg:text-lg text-black">{{label}}</div>
       <div class="button-border button-border-left"></div>
       <div class="button-border button-border-top"></div>
